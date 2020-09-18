@@ -181,6 +181,7 @@ export default function OrderForm() {
         <br></br>
         <br></br>
         <button
+          name="button"
           disabled={button}
           type="submit"
           onClick={() => {
