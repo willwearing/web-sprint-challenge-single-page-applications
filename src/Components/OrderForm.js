@@ -14,6 +14,7 @@ export default function OrderForm() {
         setPost(result.data);
         data.push(post);
         setFormState(formDefaults);
+        setOnTheWay("Your pizza order is on the way!");
       })
       .catch((error) => {
         console.log("axios error", error);
@@ -36,6 +37,7 @@ export default function OrderForm() {
   const [formState, setFormState] = useState(formDefaults);
   const [button, setButton] = useState(true);
   const [btnVis, setBtnVis] = useState("hidden");
+  const [onTheWay, setOnTheWay] = useState("");
   const [errors, setErrors] = useState({
     name: "",
     size: "",
@@ -193,7 +195,8 @@ export default function OrderForm() {
 
         <h4 className={btnVis}>
           {" "}
-          Your pizza order is on it's way! {JSON.stringify(post, null, 2)}
+          <h4>{onTheWay}</h4>
+          {JSON.stringify(post, null, 2)}
         </h4>
       </form>
     </div>

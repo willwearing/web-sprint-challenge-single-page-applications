@@ -6,7 +6,9 @@ export default function Home() {
     <div>
       <h1>Lambda Eats</h1>
       <Link to="/OrderForm">
-        <button>Choose Your Pizza</button>
+        <button id="pizza-button">
+          Click here to start building your Pizza!
+        </button>
       </Link>
     </div>
   );
