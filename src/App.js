@@ -9,7 +9,7 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <Switch>
-          <Route path="/" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route path="/OrderForm" component={OrderForm} />
         </Switch>
       </header>
